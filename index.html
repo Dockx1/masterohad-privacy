@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MasterOhad Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f8f7;
+    --surface: #ffffff;
+    --surface-2: #eef3f1;
+    --text: #16211f;
+    --text-muted: #52655f;
+    --text-faint: #839890;
+    --accent: #128c72;
+    --accent-ink: #ffffff;
+    --border: #dbe5e1;
+    --border-strong: #b9cac4;
+    --code-bg: #eef3f1;
+
+    --font-display: 'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+    --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1417;
+      --surface: #161d21;
+      --surface-2: #1c252a;
+      --text: #e7edec;
+      --text-muted: #96aaa4;
+      --text-faint: #647873;
+      --accent: #2fd1ac;
+      --accent-ink: #0b1210;
+      --border: #263631;
+      --border-strong: #34473f;
+      --code-bg: #1c252a;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0f1417;
+    --surface: #161d21;
+    --surface-2: #1c252a;
+    --text: #e7edec;
+    --text-muted: #96aaa4;
+    --text-faint: #647873;
+    --accent: #2fd1ac;
+    --accent-ink: #0b1210;
+    --border: #263631;
+    --border-strong: #34473f;
+    --code-bg: #1c252a;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible, .toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: clamp(28px, 6vw, 72px) clamp(20px, 5vw, 32px) 96px;
+  }
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-strong);
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex: none;
+  }
+
+  h1.doc-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: clamp(2.1rem, 4.6vw, 3.1rem);
+    line-height: 1.08;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .doc-title em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .masthead-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px 28px;
+    margin-top: 6px;
+  }
+
+  .meta-item dt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 4px;
+  }
+
+  .meta-item dd {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--text-muted);
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+  }
+
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; gap: 32px; }
+    .toc { position: static !important; }
+  }
+
+  .toc {
+    position: sticky;
+    top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .toc-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 10px;
+  }
+
+  .toc a {
+    display: flex;
+    gap: 10px;
+    padding: 7px 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+    margin-left: -13px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .toc a:hover { color: var(--text); border-left-color: var(--border-strong); }
+
+  .toc a .num {
+    font-family: var(--font-mono);
+    color: var(--text-faint);
+    font-size: 12.5px;
+  }
+
+  main { min-width: 0; }
+
+  .intro {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--text);
+    font-weight: 400;
+    max-width: 62ch;
+    margin: 0 0 48px;
+  }
+
+  section.policy {
+    padding-top: 40px;
+    margin-top: 8px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+
+  section.policy:first-of-type { border-top: none; padding-top: 0; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .section-num {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    flex: none;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .policy p, .policy li {
+    max-width: 68ch;
+    color: var(--text-muted);
+    font-size: 15.5px;
+  }
+
+  .policy p { margin: 0 0 14px; }
+  .policy strong { color: var(--text); font-weight: 600; }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 12px;
+    margin: 18px 0 20px;
+  }
+
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .data-card h3 {
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+
+  .data-card p { margin: 0; font-size: 13.5px; }
+
+  ul.plain { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  ul.plain li { position: relative; padding-left: 18px; }
+  ul.plain li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  code, .inline-code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    padding: 0.1em 0.42em;
+    border-radius: 5px;
+    color: var(--text);
+  }
+
+  .callout {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  footer.doc-footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="masthead">
+    <div class="eyebrow">Data &amp; Privacy Notice</div>
+    <h1 class="doc-title">Privacy Policy for <em>MasterOhad</em></h1>
+    <dl class="masthead-meta">
+      <div class="meta-item">
+        <dt>Applies to</dt>
+        <dd>The MasterOhad Discord bot, wherever it is installed</dd>
+      </div>
+      <div class="meta-item">
+        <dt>Last updated</dt>
+        <dd>August 31, 2026</dd>
+      </div>
+      <div class="meta-item">
+        <dt>In-app version</dt>
+        <dd><code>/privacy</code></dd>
+      </div>
+    </dl>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-label">Contents</div>
+      <a href="#collect"><span class="num">01</span> What we collect</a>
+      <a href="#why"><span class="num">02</span> Why we collect it</a>
+      <a href="#presence"><span class="num">03</span> Presence &amp; message content</a>
+      <a href="#storage"><span class="num">04</span> Storage &amp; retention</a>
+      <a href="#sharing"><span class="num">05</span> Sharing &amp; AI use</a>
+      <a href="#rights"><span class="num">06</span> Your rights &amp; deletion</a>
+      <a href="#changes"><span class="num">07</span> Changes &amp; contact</a>
+    </nav>
+
+    <main>
+      <p class="intro">MasterOhad is a staff-management bot built for a Discord community around <strong>ER:LC</strong>, a Roblox emergency-response roleplay game. This page explains, plainly, what data the bot touches when it runs in a server and what happens to it.</p>
+
+      <section class="policy" id="collect">
+        <div class="section-head"><span class="section-num">01</span><h2>What we collect</h2></div>
+        <p>MasterOhad only collects data tied to the servers it's installed in and the members of those servers. Nothing is collected outside of Discord activity you generate.</p>
+
+        <div class="data-grid">
+          <div class="data-card">
+            <h3>Discord identity</h3>
+            <p>User ID, username, and server roles — used to identify who a command or record belongs to.</p>
+          </div>
+          <div class="data-card">
+            <h3>Staff records</h3>
+            <p>Infractions, promotions, leave-of-absence requests, and shift clock-in/out logs for staff members.</p>
+          </div>
+          <div class="data-card">
+            <h3>Roblox identity</h3>
+            <p>Linked Roblox account ID and username, via the Bloxlink verification integration.</p>
+          </div>
+          <div class="data-card">
+            <h3>ER:LC session data</h3>
+            <p>In-game joins, mod calls, and kill events pulled from the ER:LC API and tied to your Discord account.</p>
+          </div>
+          <div class="data-card">
+            <h3>Feedback &amp; tickets</h3>
+            <p>Staff feedback ratings you submit, and the contents of support tickets you open.</p>
+          </div>
+          <div class="data-card">
+            <h3>Message content</h3>
+            <p>Read only for spam/link moderation and ticket transcripts — see section 03.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="policy" id="why">
+        <div class="section-head"><span class="section-num">02</span><h2>Why we collect it</h2></div>
+        <p>Every field above exists to run a specific feature of the bot — staff scheduling, moderation, identity verification, or support tickets. None of it is used for advertising, profiling, or resale, and none of it leaves the servers that install the bot.</p>
+      </section>
+
+      <section class="policy" id="presence">
+        <div class="section-head"><span class="section-num">03</span><h2>Presence &amp; message content</h2></div>
+        <p><strong>Presence (online/offline status).</strong> Read live, in the moment a staff command runs (e.g. a member-count or dashboard command), to show how many members are currently online. It is never logged or stored — there is nothing kept to opt out of.</p>
+        <p><strong>Message content.</strong> Used for two things only: scanning messages for spam, malicious links, and mass mentions as an automated moderation safeguard; and generating a transcript when a support ticket is closed, so both staff and the user have a record of the conversation. Spam-detection samples live only in memory for a short sliding window and are discarded automatically — never written to a database or file.</p>
+      </section>
+
+      <section class="policy" id="storage">
+        <div class="section-head"><span class="section-num">04</span><h2>Storage &amp; retention</h2></div>
+        <p>Structured records — staff data, moderation history, verification links — are stored in a private MongoDB Atlas database, encrypted at rest. Data is kept for as long as needed to support these features, or until you request its deletion (section 06).</p>
+        <div class="callout">
+          <div class="callout-title">In practice</div>
+          <p>We do not currently run an automatic time-based purge — records persist until a staff member processes a deletion request, or the bot is removed from a server. If that changes, this page will be updated first.</p>
+        </div>
+      </section>
+
+      <section class="policy" id="sharing">
+        <div class="section-head"><span class="section-num">05</span><h2>Sharing &amp; AI use</h2></div>
+        <ul class="plain">
+          <li>We do not sell or share your data with third parties.</li>
+          <li>Data is not used to train machine learning or AI models of any kind.</li>
+          <li>Roblox account data is exchanged only with the Bloxlink API for verification purposes.</li>
+        </ul>
+      </section>
+
+      <section class="policy" id="rights">
+        <div class="section-head"><span class="section-num">06</span><h2>Your rights &amp; deletion</h2></div>
+        <p>You can request removal of your data from our database at any time — no reason required.</p>
+        <div class="callout">
+          <div class="callout-title">How to request deletion</div>
+          <p>Open a support ticket in the Discord server where MasterOhad is installed and choose <strong>General Support</strong>. Our staff team will confirm and process the removal of your records.</p>
+        </div>
+      </section>
+
+      <section class="policy" id="changes">
+        <div class="section-head"><span class="section-num">07</span><h2>Changes &amp; contact</h2></div>
+        <p>If this policy changes in a way that affects what we collect or how we use it, the "Last updated" date above will change and — where practical — server staff will be notified.</p>
+        <p>Questions about this policy, or the data described here, can be directed to server staff via the ticket system above, or by using the bot's <code>/privacy</code> command for a quick summary.</p>
+      </section>
+
+      <footer class="doc-footer">
+        <span>MasterOhad — ER:LC Staff Management Bot</span>
+        <span>Effective 2026-08-31</span>
+      </footer>
+    </main>
+  </div>
+</div>
+</body>
+</html>
